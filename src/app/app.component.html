@@ -1,44 +1,60 @@
+
+<!-- Icons-->
+<!-- Check the icons in Material.io for the text to be entered-->
 <div>
-  <button mat-button>Click Me!</button>
-
-  <button mat-raised-button>Click Me!</button>
-
-  <button mat-flat-button>Click Me!</button>
-
-  <button mat-stroked-button>Click Me!</button>
+  <mat-icon color="primary">open_in_new</mat-icon>
 </div>
 
-
-<!-- Circular buttons-->
+<!-- Badges -->
+ 
 <div>
-  <button mat-icon-button>Icon</button>
-  <button mat-fab>Fab</button>
-  <button mat-mini-fab> Mini-fab</button>
+  <span matBadge='5'>Notifications</span>
 </div>
 
-<!-- Button colors-->
-
+<!-- Badge positioning-->
 <div>
-  <button color='primary' mat-button>Primary</button>
-  <button color="accent" mat-button>Accent</button>
-  <button color="warn" disableRipple mat-button>Warn</button>
-  <button color='primary' mat-raised-button>Primary</button>
-  <button color="accent" mat-raised-button>Accent</button>
-  <button color="warn" mat-raised-button>Warn</button>
+  <span matBadge='5' matBadgePosition="below before">Notifications</span>
+</div>
+<div>
+  <span matBadge='5' matBadgePosition="below after">Notifications</span>
+</div>
+<div>
+  <span matBadge='5' matBadgePosition='above before'>Notifications</span>
 </div>
 
-<!-- Button toggle-->
+<!-- Badge sizing-->
 <div>
-  <mat-button-toggle #toggleBtn checked disableRipple disabled>Toggle</mat-button-toggle>
-  {{toggleBtn.checked}}
+  <span matBadge='5' matBadgeSize='small'>Notifications</span>
+</div>
+<div>
+  <span matBadge='5' matBadgeSize='medium'>Notifications</span>
+</div>
+<div>
+  <span matBadge='5' matBadgeSize='large'>Notifications</span>
 </div>
 
-<!-- Group of button toggles-->
+<!-- color-->
 <div>
-  <mat-button-toggle-group #toggleGroup='matButtonToggleGroup' multiple>
-    <mat-button-toggle value='angular'>Angular</mat-button-toggle>
-    <mat-button-toggle value='react'>React</mat-button-toggle>
-    <mat-button-toggle value='vue'>Vue</mat-button-toggle>
-  </mat-button-toggle-group>
-  {{toggleGroup.value}}
+  <span matBadge='5' matBadgeColor='primary'>Notifications</span>
+</div>
+<div>
+  <span matBadge='5' matBadgeColor='accent'>Notifications</span>
+</div>
+<div>
+  <span matBadge='5' matBadgeColor='warn'>Notifications</span>
+</div>
+
+<!-- Remove badge overlap with text-->
+<div>
+  <span matBadge='5' matBadgeOverlap='false'>Notifications</span>
+</div>
+
+<!--Property Binding-->
+<div>
+  <span [matBadge]='notifications' matBadgeOverlap='false'>Notifications</span>
+</div>
+
+<!-- Conditionally removing badge-->
+<div>
+  <span [matBadge]='notifications' [matBadgeHidden]='notifications===0' matBadgeOverlap='false'>Notifications</span>
 </div>
