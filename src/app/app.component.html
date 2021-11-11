@@ -1,34 +1,28 @@
-<mat-toolbar color='accent'>
-  <div>Codevolution</div>
-  <div>
-    <span>Home</span>
-    <span>About</span>
-    <span>Services</span>
-  </div>
-</mat-toolbar>
 
-<mat-sidenav-container>
-  <mat-sidenav opened>Sidenav</mat-sidenav>
-  <mat-sidenav-content>Main</mat-sidenav-content>
-</mat-sidenav-container>
+<!-- Basic Menu-->
+<mat-menu #appMenu='matMenu' xPosition='after' yPosition='above'>
+  <button mat-menu-item [matMenuTriggerFor]='subMenu'>FrontEnd</button>
+  <button mat-menu-item> BackEnd</button>
+</mat-menu>
 
-<!-- Binding to a button-->
-<mat-sidenav-container>
-  <mat-sidenav [(opened)]='opened'>Sidenav</mat-sidenav>
-  <mat-sidenav-content>Main
-    <button (click)='opened=!opened'>Toggle Opened</button>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<button mat-flat-button [matMenuTriggerFor]='appMenu'>Menu</button>
 
-<!--Modes of a sidenav-->
-<!-- Default is 'over'-->
-<mat-sidenav-container>
-  <mat-sidenav mode='push' #sidenav [(opened)]='opened2' (opened)="log('Opened')" (closed)="log('Closed')">Sidenav</mat-sidenav>
-  <mat-sidenav-content>Main
-    <button (click)='opened2 = !opened2'>Toggle Sidenav</button>
-    <button (click)='sidenav.open()'>Open</button>
-    <button (click)='sidenav.close()'>Close</button>
-    <button (click)='sidenav.toggle()'>Toggle</button>
-  </mat-sidenav-content>
 
-</mat-sidenav-container>
+<!-- Sub Menu-->
+<mat-menu #subMenu = 'matMenu'>
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item> Vue</button>
+</mat-menu>
+
+<!-- Lazy loading-->
+
+<mat-menu #lazyMenu="matMenu">
+  <ng-template matMenuContent let-name='name'>
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Log Out {{name}}</button>
+  </ng-template>
+</mat-menu>
+
+<button [matMenuTriggerData]="{name: 'Kevin'}" [matMenuTriggerFor]='lazyMenu'>Kevin</button>
+<button [matMenuTriggerData]="{name: 'Roshan'}" [matMenuTriggerFor]='lazyMenu'>Roshan</button>

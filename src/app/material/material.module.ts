@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
-const MaterialComponents=[
 
-  MatToolbarModule,
-  MatSidenavModule
- 
+import {MatMenuModule} from '@angular/material/menu';
+
+const MaterialComponents=[
+  MatMenuModule
 ]
 
 
