@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 
-import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCardModule} from '@angular/material/card';
 const MaterialComponents=[
-  MatExpansionModule
-
+  MatCardModule
 ]
 
 
