@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 
+import {MatGridListModule} from '@angular/material/grid-list';
 
-import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
 const MaterialComponents=[
-  MatListModule,
-  MatIconModule,
-  MatDividerModule
+  MatGridListModule
+
 ]
 
 
