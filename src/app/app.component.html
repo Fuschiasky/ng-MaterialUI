@@ -1,21 +1,44 @@
-<div class="mat-display-5">Display 5</div>
-<div class="mat-display-4">Display 4</div>
-<div class="mat-display-3">Display 3</div>
-<div class="mat-display-2">Display 2</div>
-<div class="mat-display-1">Display 1</div>
+<div>
+  <button mat-button>Click Me!</button>
 
-<div class="mat-headline">Headline for h1</div>
-<div class="mat-title">Heading for h2</div>
-<div class="mat-subheading-2">Heading for h3</div>
-<div class="mat-subheading-1">Headline for h4</div>
+  <button mat-raised-button>Click Me!</button>
 
-<div class="mat-body-1">This is body text</div>
-<div class="mat-body-2">This is body-2 text</div>
-<div class="mat-caption">This is caption</div>
+  <button mat-flat-button>Click Me!</button>
 
-<div class='mat-typography'>
-  <h1>This is a heading for h1</h1>
-  <h2>This is a heading for h2</h2>
-  <h3>This is a heading for h3</h3>
-  <h4> This is a heading for h4</h4>
+  <button mat-stroked-button>Click Me!</button>
+</div>
+
+
+<!-- Circular buttons-->
+<div>
+  <button mat-icon-button>Icon</button>
+  <button mat-fab>Fab</button>
+  <button mat-mini-fab> Mini-fab</button>
+</div>
+
+<!-- Button colors-->
+
+<div>
+  <button color='primary' mat-button>Primary</button>
+  <button color="accent" mat-button>Accent</button>
+  <button color="warn" disableRipple mat-button>Warn</button>
+  <button color='primary' mat-raised-button>Primary</button>
+  <button color="accent" mat-raised-button>Accent</button>
+  <button color="warn" mat-raised-button>Warn</button>
+</div>
+
+<!-- Button toggle-->
+<div>
+  <mat-button-toggle #toggleBtn checked disableRipple disabled>Toggle</mat-button-toggle>
+  {{toggleBtn.checked}}
+</div>
+
+<!-- Group of button toggles-->
+<div>
+  <mat-button-toggle-group #toggleGroup='matButtonToggleGroup' multiple>
+    <mat-button-toggle value='angular'>Angular</mat-button-toggle>
+    <mat-button-toggle value='react'>React</mat-button-toggle>
+    <mat-button-toggle value='vue'>Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{toggleGroup.value}}
 </div>
