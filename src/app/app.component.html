@@ -1,13 +1,34 @@
-<!-- value between 0 and 100-->
-<!-- static value-->
-<mat-progress-spinner value='60'></mat-progress-spinner>
+<mat-toolbar color='accent'>
+  <div>Codevolution</div>
+  <div>
+    <span>Home</span>
+    <span>About</span>
+    <span>Services</span>
+  </div>
+</mat-toolbar>
 
-<!-- The required spinner-->
-<mat-spinner *ngIf = 'showSpinner'></mat-spinner>
-<button (click)="loadData()">Load Data</button>
+<mat-sidenav-container>
+  <mat-sidenav opened>Sidenav</mat-sidenav>
+  <mat-sidenav-content>Main</mat-sidenav-content>
+</mat-sidenav-container>
 
-<!-- progress-bar-->
-<!-- 4 modes = determinate, indeterminate, buffer, query-->
-<!-- value for determinate and buffer-->
-<mat-progress-bar *ngIf='showBar' mode='determinate' color='accent' value='40'></mat-progress-bar>
-<button (click)="loadBarData()">Load Bar Data</button>
+<!-- Binding to a button-->
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]='opened'>Sidenav</mat-sidenav>
+  <mat-sidenav-content>Main
+    <button (click)='opened=!opened'>Toggle Opened</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--Modes of a sidenav-->
+<!-- Default is 'over'-->
+<mat-sidenav-container>
+  <mat-sidenav mode='push' #sidenav [(opened)]='opened2' (opened)="log('Opened')" (closed)="log('Closed')">Sidenav</mat-sidenav>
+  <mat-sidenav-content>Main
+    <button (click)='opened2 = !opened2'>Toggle Sidenav</button>
+    <button (click)='sidenav.open()'>Open</button>
+    <button (click)='sidenav.close()'>Close</button>
+    <button (click)='sidenav.toggle()'>Toggle</button>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
