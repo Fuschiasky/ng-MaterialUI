@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 
-import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatExpansionModule} from '@angular/material/expansion';
 const MaterialComponents=[
-  MatGridListModule
+  MatExpansionModule
 
 ]
 

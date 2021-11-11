@@ -1,20 +1,32 @@
+<mat-accordion multi='true' hideToggle>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Angular Fundamentals
+    </mat-panel-title>
+    <mat-panel-description>
+      Total Duration: 3hours
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p> This is panel content</p>
+  <mat-action-row>
+    <button mat-button> Enroll</button>
+  </mat-action-row>
+</mat-expansion-panel>
 
-<!-- rowheight could be in px, fit, or a ratio like the one shown height looks half the width-->
 
-<mat-grid-list cols=2 rowHeight='2:1'>
-  <mat-grid-tile colspan='2'>Tile 1</mat-grid-tile>
-  <mat-grid-tile>Tile 2</mat-grid-tile>
-  <mat-grid-tile rowspan='2'>Tile 3</mat-grid-tile>
-  <mat-grid-tile>Tile 4</mat-grid-tile>
-</mat-grid-list>
-
-
-
-<mat-grid-list cols=2 rowHeight='fit' style='height:200px;' gutterSize = '10px'>
-  <mat-grid-tile colspan='2'>Tile 1</mat-grid-tile>
-  <mat-grid-tile>Tile 2</mat-grid-tile>
-  <mat-grid-tile rowspan='2'>Tile 3</mat-grid-tile>
-  <mat-grid-tile>Tile 4</mat-grid-tile>
-</mat-grid-list>
-
-<!-- Gutter size = spacing between the tiles-->
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Angular Material
+    </mat-panel-title>
+    <mat-panel-description>
+      Total Duration: 2hours
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p> This is panel content</p>
+  <mat-action-row>
+    <button mat-button> Enroll</button>
+  </mat-action-row>
+</mat-expansion-panel>
+</mat-accordion>
