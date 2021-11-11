@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Material';
-  opened= false;
-
-  opened2=false;
-
-  log(state:any){
-    console.log(state);
-  }
 }

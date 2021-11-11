@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
 
-import {MatMenuModule} from '@angular/material/menu';
+import {MatListModule} from '@angular/material/list';
 
 const MaterialComponents=[
-  MatMenuModule
+  MatListModule
 ]
 
 
