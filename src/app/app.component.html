@@ -1,38 +1,24 @@
+<mat-form-field floatLabel="auto" hideRequiredMarker appearance='legacy'>
+  <mat-label>Name</mat-label>
+  <input matInput required />
+  <mat-hint align ='end'>Min 5 characters</mat-hint>
+</mat-form-field>
 
-<!-- Horizontal stepper-->
-<mat-horizontal-stepper>
-  <mat-step label="Shipping Address">Shipping Address Details</mat-step>
-  <mat-step label="Billing Address"> Billing Address Details
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Place Order"> PLace Order Finally</mat-step>
-</mat-horizontal-stepper>
 
-<!-- Linear Steps-->
-<!-- Meant to provide restrictions to movement to each step-->
+<mat-form-field floatLabel="auto" hideRequiredMarker appearance='standard'>
+  <mat-label>Name</mat-label>
+  <input matInput required />
+  <mat-hint align ='end'>Min 5 characters</mat-hint>
+</mat-form-field>
 
-<mat-horizontal-stepper linear>
-  <mat-step label="Shipping Address" completed='true'>Shipping Address Details</mat-step>
-  <mat-step label="Billing Address" completed='false' optional> Billing Address Details
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Place Order" completed='false'> PLace Order Finally</mat-step>
-</mat-horizontal-stepper>
+<mat-form-field floatLabel="auto" hideRequiredMarker appearance='fill'>
+  <mat-label>Name</mat-label>
+  <input matInput required />
+  <mat-hint align ='end'>Min 5 characters</mat-hint>
+</mat-form-field>
 
-<!-- Vertical Stepper-->
-<mat-vertical-stepper linear>
-  <mat-step label="Shipping Address" completed='true'>Shipping Address Details</mat-step>
-  <mat-step label="Billing Address" completed='false' optional> Billing Address Details
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Place Order" completed='false'> PLace Order Finally</mat-step>
-</mat-vertical-stepper>
+<mat-form-field floatLabel="auto" hideRequiredMarker appearance='outline' color='warn'>
+  <mat-label>Name</mat-label>
+  <input matInput required />
+  <mat-hint align ='end'>Min 5 characters</mat-hint>
+</mat-form-field>
