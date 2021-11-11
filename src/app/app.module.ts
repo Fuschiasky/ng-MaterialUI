@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatSliderModule} from '@angular/material/slider';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import {MatSliderModule} from '@angular/material/slider';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
