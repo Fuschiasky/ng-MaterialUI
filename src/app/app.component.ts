@@ -7,5 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Material';
-  notifications=0;
+
+  showSpinner=false;
+
+  showBar = false;
+
+  loadData(){
+    this.showSpinner = true;
+    setTimeout(()=>{
+      this.showSpinner = false;
+    }, 2000);
+  }
+
+  loadBarData(){
+    this.showBar=true;
+    setTimeout(()=>{
+      this.showBar=false;
+    }, 2000);
+  }
 }

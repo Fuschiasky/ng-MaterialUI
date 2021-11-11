@@ -1,60 +1,13 @@
+<!-- value between 0 and 100-->
+<!-- static value-->
+<mat-progress-spinner value='60'></mat-progress-spinner>
 
-<!-- Icons-->
-<!-- Check the icons in Material.io for the text to be entered-->
-<div>
-  <mat-icon color="primary">open_in_new</mat-icon>
-</div>
+<!-- The required spinner-->
+<mat-spinner *ngIf = 'showSpinner'></mat-spinner>
+<button (click)="loadData()">Load Data</button>
 
-<!-- Badges -->
- 
-<div>
-  <span matBadge='5'>Notifications</span>
-</div>
-
-<!-- Badge positioning-->
-<div>
-  <span matBadge='5' matBadgePosition="below before">Notifications</span>
-</div>
-<div>
-  <span matBadge='5' matBadgePosition="below after">Notifications</span>
-</div>
-<div>
-  <span matBadge='5' matBadgePosition='above before'>Notifications</span>
-</div>
-
-<!-- Badge sizing-->
-<div>
-  <span matBadge='5' matBadgeSize='small'>Notifications</span>
-</div>
-<div>
-  <span matBadge='5' matBadgeSize='medium'>Notifications</span>
-</div>
-<div>
-  <span matBadge='5' matBadgeSize='large'>Notifications</span>
-</div>
-
-<!-- color-->
-<div>
-  <span matBadge='5' matBadgeColor='primary'>Notifications</span>
-</div>
-<div>
-  <span matBadge='5' matBadgeColor='accent'>Notifications</span>
-</div>
-<div>
-  <span matBadge='5' matBadgeColor='warn'>Notifications</span>
-</div>
-
-<!-- Remove badge overlap with text-->
-<div>
-  <span matBadge='5' matBadgeOverlap='false'>Notifications</span>
-</div>
-
-<!--Property Binding-->
-<div>
-  <span [matBadge]='notifications' matBadgeOverlap='false'>Notifications</span>
-</div>
-
-<!-- Conditionally removing badge-->
-<div>
-  <span [matBadge]='notifications' [matBadgeHidden]='notifications===0' matBadgeOverlap='false'>Notifications</span>
-</div>
+<!-- progress-bar-->
+<!-- 4 modes = determinate, indeterminate, buffer, query-->
+<!-- value for determinate and buffer-->
+<mat-progress-bar *ngIf='showBar' mode='determinate' color='accent' value='40'></mat-progress-bar>
+<button (click)="loadBarData()">Load Bar Data</button>
