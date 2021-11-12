@@ -1,21 +1,11 @@
-<mat-form-field>
-  <input matInput [matDatepicker]="myDatePicker">
-  <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
-  <mat-datepicker #myDatePicker startView='year'></mat-datepicker>
-</mat-form-field>
+<button mat-raised-button matTooltip = "Welcome to this site">Hello</button>
 <br>
-<!-- Specifying min and max allowed date-->
-<mat-form-field>
-  <input matInput [matDatepicker]="myDatePicker2" [min]='minDate' [max]='maxDate'>
-  <mat-datepicker-toggle matSuffix [for]="myDatePicker2"></mat-datepicker-toggle>
-  <mat-datepicker #myDatePicker2 startView='multi-year'></mat-datepicker>
-</mat-form-field>
 
-<br>
-<!-- Removing Weekends-->
-<mat-form-field>
-  <input matInput [matDatepicker]="myDatePicker3" [matDatepickerFilter]="dateFilter">
-  <mat-datepicker-toggle matSuffix [for]="myDatePicker3"></mat-datepicker-toggle>
-  <mat-datepicker #myDatePicker3 startView='multi-year'></mat-datepicker>
-</mat-form-field>
+<!-- Positioning tooltip-->
+<!--before, after, above, below-->
+<button mat-raised-button matTooltip = "Welcome to this site" matTooltipPosition='after'>After</button>
 
+<br><br>
+
+<!-- adding delay-->
+<button mat-raised-button matTooltip = "Welcome to this site" matTooltipShowDelay ="600" matTooltipHideDelay="600"  >Delay</button>
