@@ -3,18 +3,15 @@ import { NgModule } from '@angular/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core'; 
 const MaterialComponents=[
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
-  MatAutocompleteModule,
-  MatCheckboxModule,
-  MatRadioModule
-  
+  MatDatepickerModule,
+  MatNativeDateModule
 ]
 
 

@@ -1,14 +1,21 @@
-<mat-checkbox color='primary'>
-  Subscribe
-</mat-checkbox>
+<mat-form-field>
+  <input matInput [matDatepicker]="myDatePicker">
+  <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+  <mat-datepicker #myDatePicker startView='year'></mat-datepicker>
+</mat-form-field>
 <br>
-<mat-checkbox labelPosition='before'>
-  Subscribe
-</mat-checkbox>
-<br><br>
+<!-- Specifying min and max allowed date-->
+<mat-form-field>
+  <input matInput [matDatepicker]="myDatePicker2" [min]='minDate' [max]='maxDate'>
+  <mat-datepicker-toggle matSuffix [for]="myDatePicker2"></mat-datepicker-toggle>
+  <mat-datepicker #myDatePicker2 startView='multi-year'></mat-datepicker>
+</mat-form-field>
 
-<mat-radio-group>
-  <mat-radio-button value="angular" color='primary'>Angular</mat-radio-button>
-  <mat-radio-button value="react" color='accent'>React</mat-radio-button>
-  <mat-radio-button value="vue" color='warn'>Vue</mat-radio-button>
-</mat-radio-group>
+<br>
+<!-- Removing Weekends-->
+<mat-form-field>
+  <input matInput [matDatepicker]="myDatePicker3" [matDatepickerFilter]="dateFilter">
+  <mat-datepicker-toggle matSuffix [for]="myDatePicker3"></mat-datepicker-toggle>
+  <mat-datepicker #myDatePicker3 startView='multi-year'></mat-datepicker>
+</mat-form-field>
+

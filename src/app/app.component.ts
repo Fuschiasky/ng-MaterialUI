@@ -9,4 +9,12 @@ import {map, startWith} from 'rxjs/operators';
 })
 export class AppComponent{
   title = 'Material';
+
+  minDate=new Date();
+  maxDate= new Date(2022, 3, 10);  // Months start from 0
+
+  dateFilter = (date: { getDay: () => any; }|null) =>{
+    const day = date?.getDay();
+    return day!==0 && day!==6;
+  }
 }
