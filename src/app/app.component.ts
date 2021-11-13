@@ -25,6 +25,10 @@ export class AppComponent{
   displayedColumns: string[] = ['position','name','weight','symbol'];
   dataSource = ELEMENT_DATA;
   
+
+  logData(row: any){
+    console.log(row);
+  }
 }
 
 
