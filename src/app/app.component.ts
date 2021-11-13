@@ -1,6 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+
+export interface PeriodicElement {
+  name:string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] =[
+  {position:1, name:'Hydrogen', weight:1.0079, symbol:'H'},
+  {position:2, name:'Helium', weight:4.0026, symbol:'He'},
+  {position:3, name:'Lithium', weight:6.941, symbol:'Li'},
+  {position:4, name:'Beryllium', weight:9.0122, symbol:'Be'},
+]
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,16 +21,10 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
 })
 export class AppComponent{
   title = 'Material';
-  constructor(public dialog: MatDialog){}
-  openDialog(){
-    let dialogRef = this.dialog.open(DialogExampleComponent, {data:{name:'Kevin'}});
 
-    dialogRef.afterClosed().subscribe(result=>{
-      console.log('dialog result is ', result);
-    })
-  }
-
-    
+  displayedColumns: string[] = ['position','name','weight','symbol'];
+  dataSource = ELEMENT_DATA;
+  
 }
 
 
