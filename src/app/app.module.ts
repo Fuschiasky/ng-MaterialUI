@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { Scroll } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
